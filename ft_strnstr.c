@@ -6,7 +6,7 @@
 /*   By: satushi <sakata19991214@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/15 17:17:27 by satushi           #+#    #+#             */
-/*   Updated: 2022/11/05 04:13:52 by satushi          ###   ########.fr       */
+/*   Updated: 2022/11/05 04:15:43 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ char	*ft_strnstr(const char *s1, const char *s2, size_t len)
 	if (((s1 == NULL) && (len == 0)) || ((*s1 == '\0') && (*s2 != '\0')))
 		return (NULL);
 	checker = 1;
-	if (*s2 == '\0')
+	if (*s2 == '\0' && ft_strlen(s1) <= len)
 		return ((char *)(s1 + ft_strlen(s1)));
 	while ((len != 0) && ((*s1) != '\0'))
 	{

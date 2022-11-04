@@ -6,7 +6,7 @@
 /*   By: satushi <sakata19991214@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/15 20:06:16 by satushi           #+#    #+#             */
-/*   Updated: 2022/10/30 21:08:07 by satushi          ###   ########.fr       */
+/*   Updated: 2022/11/05 01:00:50 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_calloc(size_t n, size_t size)
 		dest = ft_calloc(1, 1);
 		return (dest);
 	}
-	if ((SIZE_MAX / n <= size) || (SIZE_MAX / size <= n))
+	if (SIZE_MAX / n <= size)
 		return (NULL);
 	dest = malloc(n * size);
 	if (dest == NULL)

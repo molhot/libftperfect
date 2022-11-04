@@ -6,7 +6,7 @@
 /*   By: satushi <sakata19991214@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/15 16:13:04 by satushi           #+#    #+#             */
-/*   Updated: 2022/10/30 20:29:11 by satushi          ###   ########.fr       */
+/*   Updated: 2022/11/05 01:20:15 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ static	char	*check_first(char const *s1, char const *set)
 {
 	size_t	len;
 
-	len = 0;
 	len = ft_strlen(s1);
 	while (len != 0)
 	{
@@ -32,7 +31,6 @@ static	char	*check_last(char const *s1, char const *set)
 {
 	size_t	len;
 
-	len = 0;
 	len = ft_strlen(s1);
 	s1 = s1 + len - 1;
 	while (len-- != 0)

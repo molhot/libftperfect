@@ -6,7 +6,7 @@
 /*   By: satushi <sakata19991214@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/15 19:23:28 by satushi           #+#    #+#             */
-/*   Updated: 2022/10/15 19:24:06 by satushi          ###   ########.fr       */
+/*   Updated: 2022/11/05 01:06:07 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,6 @@
 void	ft_putendl_fd(char *s, int fd)
 {
 	if (s == NULL)
-		return ;
-	if (fd < 0)
 		return ;
 	ft_putstr_fd(s, fd);
 	write(fd, "\n", 1);

@@ -6,7 +6,7 @@
 /*   By: satushi <sakata19991214@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/15 19:09:33 by satushi           #+#    #+#             */
-/*   Updated: 2022/10/30 20:22:49 by satushi          ###   ########.fr       */
+/*   Updated: 2022/11/05 01:06:58 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	if (fd < 0)
-		return ;
 	if (s == NULL)
 		return ;
 	while ((*s) != '\0')

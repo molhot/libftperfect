@@ -6,7 +6,7 @@
 /*   By: satushi <sakata19991214@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 01:42:50 by satushi           #+#    #+#             */
-/*   Updated: 2022/10/27 23:09:29 by satushi          ###   ########.fr       */
+/*   Updated: 2022/11/05 01:00:08 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,6 +68,8 @@ int	ft_atoi(const char *str)
 	while ('0' <= *str && *str <= '9')
 	{
 		counter = counter + 1;
+		if(counter >= 20)
+			return (for_longmax(plus_or_minus));
 		str = str + 1;
 	}
 	if (counter == 0)

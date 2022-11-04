@@ -6,7 +6,7 @@
 /*   By: satushi <sakata19991214@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/15 19:11:55 by satushi           #+#    #+#             */
-/*   Updated: 2022/10/27 23:11:15 by satushi          ###   ########.fr       */
+/*   Updated: 2022/11/05 01:06:35 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ void	ft_putnbr_fd(int n, int fd)
 	long	max_numdigit;
 
 	n_cp = (long)n;
-	if (n_cp == 0 || n_cp == -2147483648 || fd < 0)
+	if (n_cp == 0 || n_cp == -2147483648)
 	{
 		if (n_cp == 0)
 			ft_putstr_fd("0", fd);

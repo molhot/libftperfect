@@ -6,7 +6,7 @@
 /*   By: satushi <sakata19991214@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/15 17:10:46 by satushi           #+#    #+#             */
-/*   Updated: 2022/10/30 22:40:11 by satushi          ###   ########.fr       */
+/*   Updated: 2022/11/05 01:18:51 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ char	*ft_strrchr(const char *s, int c)
 {
 	size_t		len;
 
-	len = 0;
 	len = ft_strlen(s);
 	if (c == 0)
 		return ((char *)(s + len));

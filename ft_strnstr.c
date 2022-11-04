@@ -6,13 +6,12 @@
 /*   By: satushi <sakata19991214@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/15 17:17:27 by satushi           #+#    #+#             */
-/*   Updated: 2022/10/30 20:28:39 by satushi          ###   ########.fr       */
+/*   Updated: 2022/11/05 01:17:54 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-//#include<string.h>
-//#include<stdio.h>
+
 static int	ft_strstr_2(const char *s1, const char *s2, size_t len)
 {
 	size_t	sub_len;

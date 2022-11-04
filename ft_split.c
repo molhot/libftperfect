@@ -19,8 +19,6 @@ static size_t	structure_in(const char *s, char c)
 	int	individual_arrangementlength;
 
 	individual_arrangementlength = 0;
-	if (c == '\0')
-		return (2);
 	if (*s != '\0')
 	{
 		while ((*s) == c)

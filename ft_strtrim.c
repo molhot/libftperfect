@@ -6,7 +6,7 @@
 /*   By: satushi <sakata19991214@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/15 16:13:04 by satushi           #+#    #+#             */
-/*   Updated: 2022/11/05 01:20:15 by satushi          ###   ########.fr       */
+/*   Updated: 2022/11/05 01:52:09 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,8 +48,10 @@ char	*ft_strtrim(char const *s1, char const *set)
 	const char	*firstaddress;
 	const char	*lastaddress;
 
-	if (s1 == NULL || set == NULL)
+	if (s1 == NULL)
 		return (NULL);
+	if (set == NULL)
+		return (ft_strdup(s1));
 	if (*s1 == '\0' && *set == '\0')
 		return (ft_strdup(""));
 	firstaddress = check_first(s1, set);

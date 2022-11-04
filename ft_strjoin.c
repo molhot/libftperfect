@@ -6,7 +6,7 @@
 /*   By: satushi <sakata19991214@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/15 17:46:43 by satushi           #+#    #+#             */
-/*   Updated: 2022/11/05 01:10:28 by satushi          ###   ########.fr       */
+/*   Updated: 2022/11/05 01:49:06 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,9 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	if ((s1 == NULL) && (s2 == NULL))
 		return (NULL);
 	if (s1 == NULL)
-		return ((char *)s2);
+		return (ft_strdup(s2));
 	if (s2 == NULL)
-		return ((char *)s1);
+		return (ft_strdup(s1));
 	len = ft_strlen(s1) + ft_strlen(s2);
 	dust = (char *)malloc(sizeof(char) * (len + 1));
 	if (!(dust))

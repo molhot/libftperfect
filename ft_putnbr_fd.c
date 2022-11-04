@@ -6,7 +6,7 @@
 /*   By: satushi <sakata19991214@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/15 19:11:55 by satushi           #+#    #+#             */
-/*   Updated: 2022/11/05 01:06:35 by satushi          ###   ########.fr       */
+/*   Updated: 2022/11/05 01:50:45 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static int	digitcounter(long n)
 {
-	long	digit;
+	int	digit;
 
 	digit = 0;
 	while (n != 0)

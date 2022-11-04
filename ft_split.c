@@ -10,9 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-//リークの確認
 #include "libft.h"
-#include<stdio.h>
 
 static size_t	structure_in(const char *s, char c)
 {

@@ -16,8 +16,6 @@ char	*ft_strrchr(const char *s, int c)
 {
 	size_t		len;
 
-	if ((*s) == '\0' && (c == '\0'))
-		return (s);
 	len = 0;
 	len = ft_strlen(s);
 	if (c == 0)

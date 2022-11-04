@@ -25,6 +25,8 @@ endif
 
 all: $(NAME)
 
+bonus: all
+
 $(NAME):$(OBJS)
 	ar -rc $(NAME) $(OBJS)
 

@@ -6,7 +6,7 @@
 /*   By: satushi <sakata19991214@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/15 17:39:17 by satushi           #+#    #+#             */
-/*   Updated: 2022/11/05 02:57:59 by satushi          ###   ########.fr       */
+/*   Updated: 2022/11/05 04:08:08 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,23 +14,26 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	char	*firstaddress;
-	size_t	dstlen;
-	size_t	srclen;
+	size_t	i;
+	size_t	dst_len;
+	size_t	src_len;
 
-	firstaddress = dst;
-	if (dst == NULL && dstsize == 0)
-		return (ft_strlen(src));
-	dstlen = ft_strlen((const char *)dst);
-	srclen = ft_strlen(src);
-	if (dstlen >= dstsize)
-		return (srclen + dstsize);
-	if (dstlen + srclen >= dstsize)
-		dstsize = dstsize - dstlen;
-	while ((*dst) != '\0')
-		dst = dst + 1;
-	while ((dstsize-- != 1) && (*src != '\0'))
-		*dst++ = *src++;
-	*dst = '\0';
-	return (ft_strlen((const char *)firstaddress) + srclen);
+	src_len = ft_strlen(src);
+	if (!dst && dstsize == 0)
+		return (src_len);
+	dst_len = ft_strlen(dst);
+	if (dstsize == 0)
+		return (src_len);
+	if (dst_len < dstsize)
+	{
+		i = 0;
+		while (src[i] != '\0' && i + 1 < dstsize - dst_len)
+		{
+			dst[dst_len + i] = src[i];
+			i = i + 1;
+		}
+		dst[dst_len + i] = '\0';
+		return (src_len + dst_len);
+	}
+	return (src_len + dstsize);
 }

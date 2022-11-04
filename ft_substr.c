@@ -6,7 +6,7 @@
 /*   By: satushi <sakata19991214@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/15 15:51:04 by satushi           #+#    #+#             */
-/*   Updated: 2022/11/05 01:22:27 by satushi          ###   ########.fr       */
+/*   Updated: 2022/11/05 04:41:07 by satushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t		i;
 	size_t		slen;
 
-	slen = ft_strlen(s);
 	if (s == NULL)
 		return (NULL);
+	slen = ft_strlen(s);
 	if ((slen == 0) || (slen <= start))
 		return (ft_strdup(""));
 	if (slen - start < len)

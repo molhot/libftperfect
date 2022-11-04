@@ -19,13 +19,14 @@ CC = gcc
 
 CFLAGS = -Wall -Wextra -Werror -I includes
 
+ifeq ($(MAKECMDGOALS), bonus)
+	OBJS += $(BONUS_OBJS)
+endif
+
 all: $(NAME)
 
 $(NAME):$(OBJS)
 	ar -rc $(NAME) $(OBJS)
-
-bonus: $(OBJS) $(BONUS_OBJS)
-	ar -rc $(NAME) $(OBJS) $(BONUS_OBJS)
 
 clean:
 	rm -f $(OBJS) $(BONUS_OBJS)
